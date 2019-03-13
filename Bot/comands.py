@@ -2,15 +2,16 @@
 import requests
 
 
-def get_wether_today():
-	url = 'https://samples.openweathermap.org/data/2.5/weather?q=Minsk&appid=812e89737fcf7992cc92812abee5c137'
-
-	r = requests.get(url).json()
+def get_weather_today():
+	city_name = "в Минске"
+	city_id = 625144
+	appid = "812e89737fcf7992cc92812abee5c137"
 	
-	city = r['name']
-	weather = r['main']
-	return str(city), str(weather)
-
+	res = requests.get("http://api.openweathermap.org/data/2.5/weather",
+	    params={'id': city_id, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
+	data = res.json()
+	return ("Сегодня:", city_name),	("состояние погоды:", data['weather'][0]['description']), ("Температура воздуха:", data['main']['temp']), ("минимальная температура:", data['main']['temp_min']), ("максимальная температура:", data['main']['temp_max'])	
+	
 
 def get_rate_today_usd():
 	
