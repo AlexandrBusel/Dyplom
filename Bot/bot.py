@@ -2,7 +2,7 @@
 import requests
 
 import misc
-from comands import get_rate_today_usd, get_rate_today_rub, get_rate_today_eur, get_rate_today_uah, get_rate_today_eur,get_rate_today_pln, get_wether_today
+from comands import get_rate_today_usd, get_rate_today_rub, get_rate_today_eur, get_rate_today_uah, get_rate_today_eur,get_rate_today_pln, get_weather_today
 from movie_parser import MoviesList
 
 from time import sleep
@@ -65,7 +65,7 @@ def main():
 				
 
 			if text == 'погода':
-				send_message(chat_id, get_wether_today())
+				send_message(chat_id, get_weather_today())
 
 			
 			if text == 'кино сегодня':
