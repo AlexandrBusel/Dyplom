@@ -43,12 +43,12 @@ def index():
 
 	# return render_template('curs.html')
 
-@app.route('/films')
-def films():
+# @app.route('/films')
+# def films():
 	
 	
-	# return 'Hello world'
-	return render_template('films.html')
+# 	# return 'Hello world'
+# 	return render_template('films.html')
 
 
 @app.route('/zadanie')
