@@ -4,23 +4,40 @@
 
 {% block title %}
 
-	Curses valute
+	Курсы валют
 
 {% endblock %}
 
 
 
 {% block content_title %}
-
-	Curses NBRB
-
+<h1 style="margin-bottom: 40px; margin-left: 50px;">
+	Курсы основных валют на сегодня
+</h1>
 {% endblock %}
 
 
 {% block content %}
 
-	dollar USA
-	EURO
-	Russian ruble
+	{%for curses in curs %}
+	<!-- <ul style="margin-left: 50px;"> -->
+		<!-- <li> -->
+			
+		<h3 style="margin-left: 30px; margin-bottom: 40px;">
+			{{curses}}
+		</h3>
+
+
+		<h1 style="margin-left: 50px;">Посмотреть курсы валют за выбранную дату</h1>
+		<form style="margin-bottom: 50px; margin-left: 100px; margin-top: 30px;" action="https://afisha.tut.by/day/film/">
+		
+			<input style="height: 25px;" type="date" id="date" name=""/>
+			<button style="width: 150px; height: 30px;" type="submit">Выбрать дату</button>
+		</form>
+		
+		<!-- </li> -->
+
+	<!-- </ul> -->
+	{%endfor%}
 
 {% endblock %}

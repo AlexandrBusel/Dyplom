@@ -4,7 +4,7 @@
 
 {% block title %}
 
-	Pogoda
+	Погода в Минске
 
 {% endblock %}
 
@@ -12,16 +12,19 @@
 
 {% block content_title %}
 
-	Pogoda in MINSK
+	Погода сегодня
 
 {% endblock %}
 
 
 {% block content %}
 
-temperature:
-humidity:
-wind:
-precipitation:
+	{%for weather in pogoda %}
+		<div style="margin-top: 50px; margin-bottom: 80px;">
+			<h3 style="padding-left: 50px; padding-top: 30px; padding-bottom: 30px; font-size: 24px;">
+				{{weather}}
+			</h3>
+		</div>
+	{%endfor%}
 
 {% endblock %}

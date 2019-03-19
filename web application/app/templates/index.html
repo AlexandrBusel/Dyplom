@@ -21,9 +21,9 @@
 {% block content %}
 	
 <!-- weather widget start -->
-<div class="content" style="width: 98%; margin-right: 30px; padding-top: 25px;">
+<div class="content" style="width: 98%; margin-right: 30px;">
 	<div class="wether" style="width: 30%; float: left;">
-		<h1 style="text-align: center; margin-bottom: 20px; margin-top: 20px;"> Погода в Минске</h1>
+		<h1 style="text-align: center; margin-bottom: 20px; margin-top: 20px;">Прогноз погоды</h1>
 		<div id="m-booked-bl-simple-week-vertical-12792" >
 			<div class="booked-wzs-160-275 weather-customize" style="background-color:#4d4d4d; width:350px;" id="width4 " >
 				<a target="_blank" class="booked-wzs-top-160-275" href="">
@@ -115,107 +115,29 @@
 
 
 	<!-- curs widget -->
-	<div class="curs" style="width:30%; float:right; margin-top: 20px;">	
-		<h1 style="text-align: center; margin-bottom: 20px;"> Курсы валют НБ РБ</h1>
+	<div class="curs" style="width:30%; float:right;">	
+		<h1 style="text-align: center; margin-bottom: 20px;"> Курсы валют</h1>
 		<iframe style="margin-left:20px; width: 100%; margin-top:0; position: relative; border:2px; overflow:hidden; background-color:transparent; height:285px" scrolling="no" src="https://fortrader.org/informers/getInformer?st=9&cat=7&title=%D0%9A%D1%83%D1%80%D1%81%D1%8B%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%20%D0%9D%D0%91%20%D0%A0%D0%91&texts=%7B%22toolTitle%22%3A%22%D0%92%D0%B0%D0%BB%D1%8E%D1%82%D0%B0%22%2C%22todayCourse%22%3A%22BYN%22%7D&mult=1&showGetBtn=0&hideHeader=0&hideDate=0&w=0&codes=1&colors=titleTextColor%3Dffffff%2CtitleBackgroundColor%3D444444%2CthTextColor%3D454545%2CthBackgroundColor%3Dfff%2CsymbolTextColor%3D454545%2CtableTextColor%3D454545%2CborderTdColor%3De8e8e8%2CtableBorderColor%3De8e8e8%2CprofitTextColor%3D89bb50%2CprofitBackgroundColor%3Deaf7e1%2ClossTextColor%3Dff1616%2ClossBackgroundColor%3Df6e1e1%2CoddBackgroundTrColor%3Dfff%2CevenBackgroundTrColor%3Dfff%2CdataTextColor%3D787878%2CdataBackgroundColor%3Dfff%2CinformerLinkTextColor%3D5e5e5e%2CinformerLinkBackgroundColor%3Df1f1f1&items=2%2C21%2C40%2C49%2C11111&columns=todayCourse&toCur=14"></iframe>
 	</div>
 	<!-- curs widget end -->
 
-	<div class="film" style="padding-top: 20px;">
-		<h1 style="text-align: center; margin-bottom: 20px; margin-top: ;">Сегодня в КИНО</h1>
-		<div class="films" style="width: 30%; height: 370px; margin-left: auto; margin-right: auto; text-align: center;">
-			<div class="l-col">
-				<div class="l-col-i">
-					<div id="afisha_block" class="b-r-widget">
-						<div class="w-afisha-item" style="">
-							<a href="https://afisha.tut.by/film/gromkaya-svyaz/" data-ua-hash="widget_afisha_minsk_film_83860" class="full_link"></a>
-							<div class="w-afisha-pic">
-								<div class="w-afisha-fade">
-									<img class="w-afisha-pic__image" src="https://img.afisha.tut.by/static/media/194x158c/screens/05/4/gromkaya-svyaz-8424325.jpg" width="300" height="258" alt="">
-								</div>
-							</div>
-							<div class="w-header">
-								<div class="title"><h3>Сегодня в кино</h3></div>
-							</div>
-							<div class="w-afisha">
-								<div class="w-afisha-c">
-								<p class="w-afisha-h"><h2>Громкая связь</h2></p>
-								<p class="w-afisha-g"><h3>Комедия</h3></p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<script type="text/javascript">(function(items){$(items.hide().get(Math.floor(Math.random()*items.length()))).show();})($('#afisha_block div.w-afisha-item'));</script>
+	<div class="film" style="">
+		<h1 style="text-align: center; margin-bottom: 20px; margin-top: ;">Сегодня в кинотеатрах Минска</h1>
+		<div class="films" style="width: 30%; height: 100%; margin-left: auto; margin-right: auto;">
+
+			{%for movie in movies %}
+			<ul style="margin-left: 50px;">
+				<li>
+					<h3>{{movie}}</h3>
+				</li>
+			</ul>
+			{%endfor%}
+			
 		</div>
 	</div>
 </div>
 
+
 {% endblock %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.querySelector('body > div:nth-child(119) > div.l-main > div.l-box.region-widgets > div > div > div:nth-child(3)')
-
-
-
-
-
-
-
-
-<div class="l-col"><div class="l-col-i"><div id="afisha_block" class="b-r-widget"><div class="w-afisha-item" style="display: block;">
-	<a href="https://afisha.tut.by/film/zakonoposlushnyy_grazhdanin/" data-ua-hash="widget_afisha_minsk_film_25073" class="full_link"></a>
-	<div class="w-afisha-pic">
-		<div class="w-afisha-fade"><img class="w-afisha-pic__image" src="https://img.afisha.tut.by/static/media/194x158c/screens/01/0/zakonoposlushnyy-grazhdanin-899135.jpg" width="194" height="158" alt=""></div>
-	</div>
-	<div class="w-header"><div class="title">Смотрите онлайн</div></div>
-	<div class="w-afisha"><div class="w-afisha-c">
-		<p class="w-afisha-h">Законопослушный гражданин</p>
-		<p class="w-afisha-g">Драма</p>
-		<p class="w-afisha-r">8,0<span class="b-icon icon-star"></span></p>
-	</div></div>
-</div><div class="w-afisha-item" style="display: none;">
-	<a href="https://afisha.tut.by/film/eskort_57912/" data-ua-hash="widget_afisha_minsk_film_57912" class="full_link"></a>
-	<div class="w-afisha-pic">
-		<div class="w-afisha-fade"><img class="w-afisha-pic__image" src="https://img.afisha.tut.by/static/media/194x158c/screens/00/f/eskort-284912.jpg" width="194" height="158" alt=""></div>
-	</div>
-	<div class="w-header"><div class="title">Смотрите онлайн</div></div>
-	<div class="w-afisha"><div class="w-afisha-c">
-		<p class="w-afisha-h">Эскорт</p>
-		<p class="w-afisha-g">Драма</p>
-		<p class="w-afisha-r">6,0<span class="b-icon icon-star"></span></p>
-	</div></div>
-</div><div class="w-afisha-item" style="display: none;">
-	<a href="https://afisha.tut.by/film/bunker/" data-ua-hash="widget_afisha_minsk_film_26111" class="full_link"></a>
-	<div class="w-afisha-pic">
-		<div class="w-afisha-fade"><img class="w-afisha-pic__image" src="https://img.afisha.tut.by/static/media/194x158c/screens/0d/a/bunker-899091.jpg" width="194" height="158" alt=""></div>
-	</div>
-	<div class="w-header"><div class="title">Смотрите онлайн</div></div>
-	<div class="w-afisha"><div class="w-afisha-c">
-		<p class="w-afisha-h">Бункер</p>
-		<p class="w-afisha-g">Детектив</p>
-		<p class="w-afisha-r">7,3<span class="b-icon icon-star"></span></p>
-	</div></div>
-</div></div></div></div>
-
-<script type="text/javascript">(function(items){$(items.hide().get(Math.floor(Math.random()*items.length))).show();})($('#afisha_block div.w-afisha-item'));</script>
 

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+
+	Сегодня в кино
+
+{% endblock %}
+
+
+
+{% block content_title %}
+
+	Сегодня в кино
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container" style="height: 100%; margin-top: 20px; margin-bottom: 20px; margin-left: 50px;">
+
+	<form action="https://afisha.tut.by/day/film/">
+		
+		<input style="height: 25px;" type="date" id="date" name="Дата"/>
+		<button style="width: 150px; height: 30px;" type="submit">Посмотреть</button>
+	</form>
+</div>
+
+
+{%for movie in movies %}
+<ul style="margin-left: 50px;">
+	<li>
+		<h3>{{movie}}</h3>
+	</li>
+
+</ul>
+{%endfor%}
+
+
+{% endblock %}
+
