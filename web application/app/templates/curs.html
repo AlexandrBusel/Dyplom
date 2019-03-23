@@ -11,9 +11,9 @@
 
 
 {% block content_title %}
-<h1 style="margin-bottom: 40px; margin-left: 50px;">
-	Курсы основных валют на сегодня
-</h1>
+
+	Курсы основных валют 
+
 {% endblock %}
 
 
@@ -22,19 +22,19 @@
 	{%for curses in curs %}
 	<!-- <ul style="margin-left: 50px;"> -->
 		<!-- <li> -->
+		<div class="container" style="text-align: center;">	
+			<h3 style="margin-left: 30px; margin-bottom: 40px;">
+				{{curses}}
+			</h3>
+
+
+			<h1 style="margin-left: 50px;">Посмотреть курсы валют за выбранную дату:</h1>
+			<form style="margin-bottom: 50px; margin-left: 100px; margin-top: 30px;" action="">
 			
-		<h3 style="margin-left: 30px; margin-bottom: 40px;">
-			{{curses}}
-		</h3>
-
-
-		<h1 style="margin-left: 50px;">Посмотреть курсы валют за выбранную дату</h1>
-		<form style="margin-bottom: 50px; margin-left: 100px; margin-top: 30px;" action="https://afisha.tut.by/day/film/">
-		
-			<input style="height: 25px;" type="date" id="date" name=""/>
-			<button style="width: 150px; height: 30px;" type="submit">Выбрать дату</button>
-		</form>
-		
+				<input style="height: 25px;" type="date" id="date" name="onDate"/>
+				<button style="width: 150px; height: 30px;" type="submit">Выбрать дату</button>
+			</form>
+		</div>
 		<!-- </li> -->
 
 	<!-- </ul> -->

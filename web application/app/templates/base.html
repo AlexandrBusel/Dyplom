@@ -11,10 +11,7 @@
 
 	</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 	
-	
-
 	<style>
 
 	@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Suez+One');
@@ -57,7 +54,7 @@ header{
 	float: left;
 	background-color: #343434;
 	height: 25%;
-	width: 99.4%;
+	width: 100%;
 	padding-top: 20px;
 	padding-left: 20px;
 	border-bottom: 5px solid #59695a;
@@ -72,13 +69,8 @@ header>div#logo>a{
 header>div#logo>a>span{
 	font-size: 3.0em;
 	margin-left: 10px;
-
 	font-family: 'Suez One', serif;
 }
-
-
-
-/*АДАПТИВНОСТЬ*/
 
 @media(min-width: 950px) {
 
@@ -109,43 +101,6 @@ header>div#logo>a{
 	height: 30px;
 }
 }
-
-@media(max-width: 949px) and (min-width: 525px) {
-
-#logo{
-	float: left;
-	width: 30%;
-}
-#about{
-	visibility: hidden;
-	display: none;
-}
-#reg_auth{
-	float: right;
-	width: 50%;
-}
-}
-
-@media(max-width: 524px) {
-
-header>div#logo{
-	margin-top: 30px;
-}
-
-#logo{
-	width: 100%;
-}
-#about{
-	visibility: hidden;
-	display: none;
-}
-#reg_auth{
-	visibility: hidden;
-	display: none;
-}
-}
-/* end АДАПТИВНОСТЬ*/
-
 
 #about{
 	text-align:center;
@@ -269,14 +224,7 @@ footer{
 #social>a:hover{
 	background-color: rgba(217, 91, 72, 0.6);
 }
-@media (max-width: 520px){
-	#site_name{
-		display: none;
-	}
-	#social{
-		width: 100%;
-	}
-}
+
 	</style>
 
 
@@ -319,11 +267,11 @@ footer{
 						</a>
 					</div>
 				</header>
-				
+				<!-- #60D5AC -->
 
-			<div class="container" style="padding-top: 40px; width: 100%; background-color: #60D5AC">
+			<div class="container" style="padding-top: 40px; padding-left: 20px; width: 100%; font-size: 1.2em; color: white; background-color: #557B79">
 				<div class="row" style="">
-					<h1 style="margin-left: 80px; margin-top: 30px;">						
+					<h1 style="margin-left: 80px; margin-top: 30px; margin-bottom: 20px; text-align: center; font-family: 'Roboto Slab', serif;">						
 						{% block content_title %}
 
 

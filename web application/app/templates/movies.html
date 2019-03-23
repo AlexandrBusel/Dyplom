@@ -12,7 +12,7 @@
 
 {% block content_title %}
 
-	Сегодня в кино
+	В кинотеатрах Минска
 
 {% endblock %}
 
@@ -20,25 +20,25 @@
 {% block content %}
 
 
-<div class="container" style="height: 100%; margin-top: 20px; margin-bottom: 20px; margin-left: 50px;">
+<div class="container" style="height: 100%; margin-top: 20px; margin-bottom: 20px;margin-left: 40%;">
 
-	<form action="https://afisha.tut.by/day/film/">
+	<form action="http://localhost:5000/movies" method = "post" style="padding-bottom: 40px; margin-left: 50px;">
 		
-		<input style="height: 25px;" type="date" id="date" name="Дата"/>
-		<button style="width: 150px; height: 30px;" type="submit">Посмотреть</button>
+		<input style="height: 25px;" type="date" id="date" name="dt"/>
+		<button style="width: 150px; height: 30px;" type="submit" value = "submit">Посмотреть</button>
 	</form>
+
+
+
+	{%for movie in movies %}
+	<ul style="margin-left: 50px;">
+		<li>
+			<p>{{movie}}</p>
+		</li>
+
+	</ul>
+	{%endfor%}
 </div>
-
-
-{%for movie in movies %}
-<ul style="margin-left: 50px;">
-	<li>
-		<h3>{{movie}}</h3>
-	</li>
-
-</ul>
-{%endfor%}
-
 
 {% endblock %}
 
