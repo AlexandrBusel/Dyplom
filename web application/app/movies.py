@@ -3,7 +3,11 @@ import requests
 import lxml
 from lxml import html
 
+
+
+
 movies_params = {
+
 
 'url':'https://afisha.tut.by/film/', 
 
@@ -13,6 +17,8 @@ movies_params = {
 
 'film_name':'.//a[@class = "name"]/span//text()',
 }
+
+
 
 class MoviesList:
 	
