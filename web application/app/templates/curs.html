@@ -19,21 +19,16 @@
 
 {% block content %}
 
-	{%for curses in curs %}
-	<!-- <ul style="margin-left: 50px;"> -->
-		<!-- <li> -->
+	{%for curses in cursy %}
+
+		<h3 style="margin-left: 30px; margin-bottom: 40px;">
+			{{curses}}
+		</h3>
+	
 		<div class="container" style="text-align: center;">	
-			<h3 style="margin-left: 30px; margin-bottom: 40px;">
-				{{curses}}
-			</h3>
 
-
-			<h1 style="margin-left: 50px;">Посмотреть курсы валют за выбранную дату:</h1>
-			<!-- <form style="margin-bottom: 50px; margin-left: 100px; margin-top: 30px;" method="GET">
+			<h3 style="margin-left: 50px;">Посмотреть курсы валют за выбранную дату:</h3>
 			
-				<input style="height: 25px;" type="date" placeholder="Дата" name="onDate" value="{{request.args.get('onDate')}}"/>
-				<button style="width: 150px; height: 30px;" type="submit">Выбрать дату</button>
-			</form> -->
 
 
 			<form method = "GET" style="padding-bottom: 40px; margin-left: 50px;"><br>
@@ -42,11 +37,16 @@
      
    				 <button type="submit" style="width: 150px; height: 30px; font-size: 16px; border-radius: 4px;">Посмотреть</button>
 			</form> 
-
 		</div>
-		<!-- </li> -->
 
-	<!-- </ul> -->
+			
+
+
+			
+
+		
+		
+
 	{%endfor%}
 
 {% endblock %}
