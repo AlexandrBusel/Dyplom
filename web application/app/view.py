@@ -24,9 +24,7 @@ def curs():
 	return render_template('curs.html', curs = curses())
 	pass
 
-# @app.route('/films/<date>')
-# def films(date):
-# 	return MoviesList().create_movies_list()
+
 
 @app.route('/movies')
 def movies():

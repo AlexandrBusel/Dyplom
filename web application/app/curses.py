@@ -6,7 +6,7 @@ from flask import request
 def curses():
 
 		
-
+		
 	
 		
 		usd = 'http://www.nbrb.by/API/ExRates/Rates/145'
