@@ -11,7 +11,7 @@ from lxml import html
 
 
 afisha = Blueprint('afisha', __name__, template_folder='templates')
-cursy = Blueprint('cursy', __name__, template_folder='templates')
+
 
 @afisha.route('/')
 
@@ -21,12 +21,12 @@ def index():
 
     if datefilm != None:
         movies_params = {
-        'url':'https://afisha.tut.by/film/{}'.format(datefilm), 
+        'url':'https://afisha.tut.by/day/film/{}'.format(datefilm), 
         'current_events':'//div[@id="events-block"]',
-        'events_list':'ul[@class="b-lists list_afisha col-5"]', 
-        'film_name':'.//a[@class="name"]/span//text()',
-         }
-
+        'events_list':'ul[@class = "b-lists list_afisha col-5"]',
+        'film_name':'.//a[@class = "name"]/span//text()',
+        }
+    
         tree = html.fromstring(requests.get(movies_params['url']).text)
 
         current_events = tree.xpath(movies_params['current_events'])[0]
@@ -40,7 +40,7 @@ def index():
 
                 for movie in movies_block:
 
-                    movies_list += [movie.xpath(movies_params['film_name'])[0]]
+                    movies_list+=[movie.xpath(movies_params['film_name'])[0]]
 
             return movies_list
 
@@ -57,15 +57,21 @@ def index():
 
 
 
+# cursy = Blueprint('cursy', __name__, template_folder='templates')
 
+# @cursy.route('/')
 
-@cursy.route('/')
+# def cursy():
+	
+# 	onDate = request.args.get('onDate')
+# 	if onDate != None:
 
-def cursy():
-	return render_template('curs.html')
-
-
-
-
-
+# 		usd = 'http://www.nbrb.by/API/ExRates/Rates/145{}'.format(onDate)
+# 		res_u = requests.get(usd).json()
+# 		name_u = res_u['Cur_Name']
+# 		price_u = res_u['Cur_OfficialRate']
+# 		u = str(name_u) +' - '+ str(price_u)
+# 		return str(u)
+# 	else:	
+# 		return render_template('curs.html', 'Введите дату')
 	
