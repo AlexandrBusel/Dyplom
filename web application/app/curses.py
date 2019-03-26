@@ -1,9 +1,12 @@
 
 import requests
-
+from flask import request
 
 
 def curses():
+
+		
+
 	
 		
 		usd = 'http://www.nbrb.by/API/ExRates/Rates/145'
@@ -48,3 +51,4 @@ def curses():
 		curses = [str(u)+';    '+str(e)+';    '+str(r)+';    '+str(uh)+';    '+str(p)]
 		
 		return curses
+	

@@ -14,3 +14,7 @@ def weather():
 	
 	weather = [str(city_name)+': '+str(data['weather'][0]['description'])+',   '+ 'Скорость ветра:'+' '+str(data['wind']['speed'])+' '+'м/с'+',   '+"направление:"+' '+str(data['wind']['deg'])+',   '+"Температура воздуха"+': '+str(data['main']['temp']) +',   '+ "минимальная температура:"+' '+ str(data['main']['temp_min']) +',   '+ "максимальная температура:"+' '+str(data['main']['temp_max'])+',   '+"восход:"+' '+str(data['sys']['sunrise'])+',   '+"закат:"+' '+str(data['sys']['sunset'])]
 	return weather
+
+
+
+

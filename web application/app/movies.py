@@ -2,12 +2,11 @@ import requests
 
 import lxml
 from lxml import html
-
-
+from flask import request
+from flask import render_template
 
 
 movies_params = {
-
 
 'url':'https://afisha.tut.by/film/', 
 
@@ -21,7 +20,7 @@ movies_params = {
 
 
 class MoviesList:
-	
+
 	tree = html.fromstring(requests.get(movies_params['url']).text)
 
 	current_events = tree.xpath(movies_params['current_events'])[0]
@@ -38,4 +37,7 @@ class MoviesList:
 		
 		return movies_list
 
-# movies_today = MoviesList().create_movies_list()
+
+
+
+        

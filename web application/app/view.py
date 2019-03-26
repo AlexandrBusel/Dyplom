@@ -24,27 +24,14 @@ def curs():
 	return render_template('curs.html', curs = curses())
 	pass
 
-@app.route('/films/<date>')
-def films(date):
-	return MoviesList().create_movies_list()
+# @app.route('/films/<date>')
+# def films(date):
+# 	return MoviesList().create_movies_list()
 
-@app.route('/movies', methods = ['POST', 'GET'])
+@app.route('/movies')
 def movies():
-	if request.method == 'POST':
-		user = request.form['dt']
-		return redirect(url_for('films',date = user))
-	else:
-		user = request.args.get('dt')
-		return redirect(url_for('films',date = user))
-
-
-
-
-
-
-
 	return render_template('movies.html', movies = MoviesList().create_movies_list())
-	pass	
+		
 
 
 

@@ -29,9 +29,9 @@
 
 
 			<h1 style="margin-left: 50px;">Посмотреть курсы валют за выбранную дату:</h1>
-			<form style="margin-bottom: 50px; margin-left: 100px; margin-top: 30px;" action="">
+			<form style="margin-bottom: 50px; margin-left: 100px; margin-top: 30px;" method="GET">
 			
-				<input style="height: 25px;" type="date" id="date" name="onDate"/>
+				<input style="height: 25px;" type="date" placeholder="Дата" name="onDate" value="{{request.args.get('onDate')}}"/>
 				<button style="width: 150px; height: 30px;" type="submit">Выбрать дату</button>
 			</form>
 		</div>
