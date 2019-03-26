@@ -22,13 +22,18 @@
 
 <div class="container" style="height: 100%; margin-top: 20px; margin-bottom: 20px;margin-left: 40%;">
 
-	<form class="form-inline" method = "GET" style="padding-bottom: 40px; margin-left: 50px;">
+	<!-- <form class="form-inline" method = "GET" style="padding-bottom: 40px; margin-left: 50px;">
 		
-		<input style="height: 25px;" type="date" placeholder="Дата" name="datefilm" value="{{datefilm}}"/>
+		<input style="height: 25px;" type="date" placeholder="Дата" name="datefilm" value="{{request.args.get('datefilm')}}"/>
 		<button style="width: 150px; height: 30px;" type="submit">Посмотреть</button>
-	</form>
+	</form> -->
 
-
+	<form method = "GET" style="padding-bottom: 40px; margin-left: 50px;"><br>
+ 
+    <input type="search" placeholder="YYYY/MM/DD" aria-label="Search" name = "datefilm" style="height: 30px; font-size: 16px;" value = "{{request.args.get('datefilm')}}">
+     
+    <button type="submit" style="width: 150px; height: 30px; font-size: 16px; border-radius: 4px;">Посмотреть</button>
+	</form>   	
 
 
 

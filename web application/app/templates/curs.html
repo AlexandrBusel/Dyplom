@@ -29,11 +29,20 @@
 
 
 			<h1 style="margin-left: 50px;">Посмотреть курсы валют за выбранную дату:</h1>
-			<form style="margin-bottom: 50px; margin-left: 100px; margin-top: 30px;" method="GET">
+			<!-- <form style="margin-bottom: 50px; margin-left: 100px; margin-top: 30px;" method="GET">
 			
 				<input style="height: 25px;" type="date" placeholder="Дата" name="onDate" value="{{request.args.get('onDate')}}"/>
 				<button style="width: 150px; height: 30px;" type="submit">Выбрать дату</button>
-			</form>
+			</form> -->
+
+
+			<form method = "GET" style="padding-bottom: 40px; margin-left: 50px;"><br>
+ 
+    			<input type="search" placeholder="YYYY-MM-DD" aria-label="Search" name = "onDate" style="height: 30px; font-size: 16px;" value = "{{request.args.get('onDate')}}">
+     
+   				 <button type="submit" style="width: 150px; height: 30px; font-size: 16px; border-radius: 4px;">Посмотреть</button>
+			</form> 
+
 		</div>
 		<!-- </li> -->
 
