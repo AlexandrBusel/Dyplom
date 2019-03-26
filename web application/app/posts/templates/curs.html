@@ -1,0 +1,43 @@
+ {% extends 'base.html' %}
+
+
+
+{% block title %}
+
+	Курсы валют
+
+{% endblock %}
+
+
+
+{% block content_title %}
+
+	Курсы основных валют 
+
+{% endblock %}
+
+
+{% block content %}
+
+	{%for curses in curs %}
+	<!-- <ul style="margin-left: 50px;"> -->
+		<!-- <li> -->
+		<div class="container" style="text-align: center;">	
+			<h3 style="margin-left: 30px; margin-bottom: 40px;">
+				{{curses}}
+			</h3>
+
+
+			<h1 style="margin-left: 50px;">Посмотреть курсы валют за выбранную дату:</h1>
+			<form style="margin-bottom: 50px; margin-left: 100px; margin-top: 30px;" method="GET">
+			
+				<input style="height: 25px;" type="date" placeholder="Дата" name="onDate" value="{{request.args.get('onDate')}}"/>
+				<button style="width: 150px; height: 30px;" type="submit">Выбрать дату</button>
+			</form>
+		</div>
+		<!-- </li> -->
+
+	<!-- </ul> -->
+	{%endfor%}
+
+{% endblock %}

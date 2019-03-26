@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}
+
+	Сегодня в кино
+
+{% endblock %}
+
+
+
+{% block content_title %}
+
+	В кинотеатрах Минска
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container" style="height: 100%; margin-top: 20px; margin-bottom: 20px;margin-left: 40%;">
+
+	<!-- <form class="form-inline" method = "GET" style="padding-bottom: 40px; margin-left: 50px;">
+		
+		<input style="height: 25px;" type="search" placeholder="Дата" name="datefilm" value="{{request.args.get('datefilm')}}"/>
+		<button style="width: 150px; height: 30px;" type="submit">Посмотреть</button>
+	</form> -->
+
+
+	<form class="form-inline my-2 my-lg-0"  method = "GET"><br>
+ 
+	    <input class="form-control mr-sm-2" type="search" placeholder="Дата" aria-label="Search" name = "datefilm" value = "{{request.args.get('datefilm')}}">
+	     
+	    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Искать</button>
+	</form>
+
+
+
+	{%for movie in movies %}
+	<ul style="margin-left: 50px;">
+		<li>
+			<p>{{movie}}</p>
+		</li>
+
+	</ul>
+	{%endfor%}
+</div>
+
+{% endblock %}
+
