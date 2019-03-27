@@ -4,7 +4,7 @@
 
 {% block title %}
 
-	Сегодня в кино
+	В кинотеатрах Минска
 
 {% endblock %}
 
@@ -19,10 +19,6 @@
 
 {% block content %}
 
-
-
-
-
 <div class="container" style="height: 100%; margin-top: 20px; margin-bottom: 20px;margin-left: 40%;">
 	
 	<h3>Выбрать дату:</h3>
@@ -36,6 +32,7 @@
 </div>
 
 	{%for movie in movies %}
+
 		<ul style="margin-left: 40%; margin-right: auto;">
 			<li>
 				<p>{{movie}}</p>

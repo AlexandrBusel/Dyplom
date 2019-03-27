@@ -233,60 +233,59 @@ footer{
 </head>
 <body>
 	<div id="wrapper" style="height: 100vh;">
-			<!-- <div id="content">	 -->					
-		
-				<header>
-					<div id="logo">
-						<a href="{{ url_for('index') }}" title="На главную">
+					
+		<header>
+			<div id="logo">
+				<a href="{{ url_for('index') }}" title="На главную">
 							
-							<span>DIPLOM PROJECT</span>
-						</a>
+					<span>DIPLOM PROJECT</span>
+				</a>
+			</div>
+			<div id="about">
+				<a href="https://vk.com/alexbusel" title="Узнать обо мне" target="blank">Обо мне</a>
+				<a href="" title="Пустая" target="blank">Обратная связь</a>
+			</div>
+			<div id="reg_auth">
+				<a href="{{ url_for('cursy.index') }}" title="Курсы валют НБ РБ" target="blank">
+					<div id="btn">
+						Курсы валют
 					</div>
-					<div id="about">
-						<a href="https://vk.com/alexbusel" title="Узнать обо мне" target="blank">Обо мне</a>
-						<a href="" title="Пустая" target="blank">Обратная связь</a>
+				</a>
+				<a href="{{ url_for('afisha.index') }}" title="Кино в Минске" target="blank">
+					<div id="btn">
+						Афиша
 					</div>
-					<div id="reg_auth">
-						<a href="{{ url_for('cursy.index') }}" title="Курсы валют НБ РБ" target="blank">
-							<div id="btn">
-								Курсы валют
-							</div>
-						</a>
-						<a href="{{ url_for('afisha.index') }}" title="Кино в Минске" target="blank">
-							<div id="btn">
-								Афиша
-							</div>
-						</a>
+				</a>
 
-						<a href="{{ url_for('pogoda') }}" title="Погода в Минске" target="blank">
-							<div id="btn">
-								Подробнее о погоде
-							</div>
-						</a>
-						<a href="{{ url_for('zadanie') }}" title="Задание для дипломной работы" target="blank">
-							<div id="btn">
-								Задание
-							</div>
-						</a>
+				<a href="{{ url_for('pogoda') }}" title="Погода в Минске" target="blank">
+					<div id="btn">
+						Подробнее о погоде
 					</div>
-				</header>
-				<!-- #60D5AC -->
+				</a>
+				<a href="{{ url_for('zadanie') }}" title="Задание для дипломной работы" target="blank">
+					<div id="btn">
+						Задание
+					</div>
+				</a>
+			</div>
+		</header>
+				
 
-			<div class="container" style="padding-top: 40px; padding-left: 20px; width: 100%; font-size: 1.2em; color: white; background-color: #557B79; padding-left: 50px; padding-bottom: 20px;">
-				<div class="row" style="">
-					<h1 style="margin-left: 80px; margin-top: 30px; margin-bottom: 20px; text-align: center; font-family: 'Roboto Slab', serif;">						
+		<div class="container" style="padding-top: 40px; padding-left: 20px; width: 100%; font-size: 1.1em; color: white; background-color: #557B79; padding-left: 50px; padding-bottom: 20px;">
+			<div class="row" style="">
+				<h1 style="margin-left: 80px; margin-top: 30px; margin-bottom: 20px; text-align: center; font-family: 'Roboto Slab', serif;">						
 						{% block content_title %}
 
 
 						{% endblock %}
-					</h1>				
+				</h1>				
 					
 					{% block content %}
 
 
 					{% endblock %}
-				</div>	
-			</div>
+			</div>	
+		</div>
 
 		<footer>
 			<div id="site_name">
