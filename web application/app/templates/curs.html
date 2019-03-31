@@ -21,17 +21,15 @@
 
 	{%for curses in cursy %}
 
-		<h3 style="margin-left: 30px; margin-bottom: 40px;">
+		<h3 style="margin-bottom: 40px; margin-top: 40px;  text-align: center;">
 			{{curses}}
 		</h3>
 	
 		<div class="container" style="text-align: center;">	
 
-			<h3 style="margin-left: 50px;">Посмотреть курсы валют за выбранную дату:</h3>
-			
+			<h3>Посмотреть курсы валют за выбранную дату:</h3>
 
-
-			<form method = "GET" style="padding-bottom: 40px; margin-left: 50px;"><br>
+			<form method = "GET" style="padding-bottom: 40px;"><br>
  
     			<input type="search" placeholder="YYYY-MM-DD" aria-label="Search" name = "onDate" style="height: 30px; font-size: 16px;" value = "{{request.args.get('onDate')}}">
      
